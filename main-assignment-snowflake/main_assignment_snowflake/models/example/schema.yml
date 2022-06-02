@@ -1,0 +1,37 @@
+
+version: 2
+
+models:
+  - name: my_first_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: my_second_dbt_model
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: m1_query1
+    description: "Calculate Monthly average NAV, Repurchase & Sale Price for each scheme."
+    columns:
+      - name: avg_nav
+        description: "calculates average"
+        tests:
+          - not_null
+  
+  - name: m1_query2
+    description: "Max and Min NAV value and Date it occurred."
+    columns:
+      - name: nav_date
+        description: "date column"
+        tests:
+          - not_null
